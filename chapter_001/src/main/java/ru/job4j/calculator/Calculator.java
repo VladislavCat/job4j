@@ -1,17 +1,44 @@
 package ru.job4j.calculator;
 
+/**
+ * Калькулятор
+ */
 public class Calculator {
+    /**
+     * Метод сложения
+     * @param first
+     * @param second
+     * @return
+     */
     public double add(double first, double second) {
         return first + second;
     }
-    public double odd(double hod, double gog){
-        return hod- gog;
+    /**
+     * Метод вычитания
+     * @param first
+     * @param second
+     * @return
+     */
+    public double odd(double first, double second){
+        return  first- second;
     }
-    public double edd(double hed, double geg){
-        return hed* geg;
+    /**
+     * Метод умножения
+     * @param first
+     * @param second
+     * @return
+     */
+    public double edd(double first, double second){
+        return  first* second;
     }
-    public double ddd(double ddd,double gdg){
-        return ddd/ gdg;
+    /**
+     * Метод деления
+     * @param first
+     * @param second
+     * @return
+     */
+    public double ddd(double first,double second){
+        return  first/ second;
     }
 
 }
