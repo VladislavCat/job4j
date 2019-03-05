@@ -13,20 +13,20 @@ public class Calculator {
     /**
      * Метод вычитания
      */
-    public double odd(double first, double second){
-        return  first- second;
+    public double odd(double first, double second) {
+        return  first - second;
     }
     /**
      * Метод умножения
      */
-    public double edd(double first, double second){
-        return  first* second;
+    public double edd(double first, double second) {
+        return  first * second;
     }
     /**
      * Метод деления
      */
-    public double ddd(double first,double second){
-        return  first/ second;
+    public double ddd(double first, double second) {
+        return  first / second;
     }
 
 }

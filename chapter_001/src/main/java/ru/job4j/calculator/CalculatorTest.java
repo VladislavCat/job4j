@@ -21,30 +21,30 @@ public class CalculatorTest  {
      * Метод проверки метода вычитания
      */
     @Test
-    public void whenOddOneMinusOneThenZero(){
+    public void whenOddOneMinusOneThenZero() {
         Calculator calc = new Calculator();
-        double result = calc.odd(1D,1D);
-        double expected= 1D-1D;
+        double result = calc.odd(1D, 1D);
+        double expected = 1D - 1D;
         assertThat(result, is(expected));
     }
     /**
      * Метод проверки метода умножения
      */
     @Test
-    public void whenEddOneMultiplyOneThen(){
+    public void whenEddOneMultiplyOneThen() {
         Calculator calc = new Calculator();
-        double result = calc.edd(1D,1D);
-        double expected= 1D*1D;
+        double result = calc.edd(1D, 1D);
+        double expected = 1D * 1D;
         assertThat(result, is(expected));
     }
     /**
      * Метод проверки метода деления
      */
     @Test
-    public void whenDddOneDeleteOneThen(){
+    public void whenDddOneDeleteOneThen() {
         Calculator calc = new Calculator();
-        double result = calc.ddd(1D,1D);
-        double expected=1D/1D;
+        double result = calc.ddd(1D, 1D);
+        double expected = 1D / 1D;
         assertThat(result, is(expected));
     }
 }
