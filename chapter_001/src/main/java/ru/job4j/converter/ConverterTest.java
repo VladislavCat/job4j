@@ -17,7 +17,7 @@ public class ConverterTest
     public void when70RubleToEuro()
     {
         Converter Converter= new Converter();
-        int result= Converter.RubleToEuro(value);
+        int result= Converter.RubleToEuro(60);
         assertThat(result, is(70));
     }
     @Test
@@ -27,7 +27,7 @@ public class ConverterTest
     public void when60RubleToDollar()
     {
         Converter Converter= new Converter();
-        int result= Converter. RubleToDollar(value);
+        int result= Converter. RubleToDollar(70);
         assertThat(result, is(60));
     }
     @Test
