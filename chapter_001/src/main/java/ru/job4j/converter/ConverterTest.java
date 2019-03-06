@@ -15,8 +15,8 @@ public class ConverterTest {
         /**
          *Метод для проверки одноименного метода конвертера из основной программы, а именно Рубли в евро
          */
-        Converter Converter = new Converter();
-        int result = Converter.RubleToEuro(60);
+        Converter converter = new Converter();
+        int result = converter.rubleToDollar(60);
         assertThat(result, is(70));
     }
     @Test
@@ -24,8 +24,8 @@ public class ConverterTest {
         /**
          *Метод для проверки одноименного метода конвертера из основной программы, а именно Рубли в доллары.
          */
-        Converter Converter = new Converter();
-        int result = Converter.RubleToDollar(70);
+        Converter converter = new Converter();
+        int result = converter.rubleToDollar(70);
         assertThat(result, is(60));
     }
     @Test
@@ -33,8 +33,8 @@ public class ConverterTest {
 /**
  *Метод для проверки одноименного метода конвертера из основной программы, а именно Евро в рубли.
  */
-        Converter Converter = new Converter();
-        int result = Converter.EuroToRuble(1 / 70);
+        Converter converter = new Converter();
+        int result = converter.euroToRuble(1 / 70);
         assertThat(result, is(1 / 70));
     }
     @Test
@@ -43,8 +43,8 @@ public class ConverterTest {
         /**
          *Метод для проверки одноименного метода конвертера из основной программы, а именно Рубли в Доллары
          */
-        Converter Converter = new Converter();
-        int result = Converter.DollarToRuble(1 / 60);
+        Converter converter = new Converter();
+        int result = converter.dollarToRuble(1 / 60);
         assertThat(result, is(1 / 60));
     }
 }
