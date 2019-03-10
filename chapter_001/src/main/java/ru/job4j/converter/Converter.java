@@ -3,28 +3,28 @@ package ru.job4j.converter;
  *Конвертер валюты
  */
 public class Converter {
+    /**
+     *Метод для перевода рублей в евро
+     */
     public int rubleToEuro(int value) {
-        /**
-         *Метод для перевода рублей в евро
-         */
-        return 70;
+        return value * 70;
     }
+    /**
+     *Метод для перевода рублей в доллары
+     */
     public int rubleToDollar(int value) {
-        /**
-         *Метод для перевода рублей в доллары
-         */
-        return 60;
+        return value * 60;
     }
+    /**
+     *Метод для перевода евро в рубли
+     */
     public int euroToRuble(int value) {
-        /**
-         *Метода для перевода евро в рубли
-         */
-        return  1 / 70;
+        return  value / 70;
     }
+    /**
+     *Метод для перевода доллары в евро
+     */
     public int dollarToRuble(int value) {
-        /**
-         *Метод для перевода доллары в евро
-         */
-        return 1 / 60;
+        return value / 60;
     }
 }
