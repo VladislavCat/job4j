@@ -1,6 +1,6 @@
 package ru.job4j.condition;
 
-public class TRGLNK {
+public class Triangle {
 
     /**
      * Метод вычисления периметра по длинам сторон.
