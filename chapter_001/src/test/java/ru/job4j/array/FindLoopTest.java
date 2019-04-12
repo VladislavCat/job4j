@@ -19,7 +19,7 @@ public class FindLoopTest {
     public void whenArrayHas0Then1() {
         FindLoop find = new FindLoop();
         int[] input = new int[]{};
-        int value=-1;
+        int value = -1;
         int result = find.indexOf(input, value);
         int expect = -1;
         assertThat(result, is(expect));
