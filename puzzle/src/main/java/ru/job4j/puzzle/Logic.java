@@ -81,7 +81,7 @@ public class Logic {
                 if(table[n][i]==1){
                     v++;
                 }
-                if(g==5 || v==5){
+                if(g==table.length || v==table.length){
                     result=true;
                 }
                 }
