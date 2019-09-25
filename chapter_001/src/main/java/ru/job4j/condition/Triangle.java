@@ -1,7 +1,5 @@
 package ru.job4j.condition;
-
 public class Triangle {
-
     /**
      * Метод вычисления периметра по длинам сторон.
      *
@@ -17,7 +15,6 @@ public class Triangle {
     public double period(double a, double b, double c) {
         return (a + b + c) / 2;
     }
-
     /**
      * Метод для вычисления площади
      */
@@ -32,7 +29,6 @@ public class Triangle {
             return -1;
         }
     }
-
     /**
      *Метод для проверки возможности существования данного треугольника
      */

@@ -1,5 +1,4 @@
 package ru.job4j.calculator;
-
 /**
  * Калькулятор
  */
@@ -28,5 +27,4 @@ public class Calculator {
     public double ddd(double first, double second) {
         return  first / second;
     }
-
 }
