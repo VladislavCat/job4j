@@ -1,5 +1,4 @@
 package ru.job4j.condition;
-
 /**
  * @author Владислав Котов
  * @version $Id$
