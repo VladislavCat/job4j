@@ -15,4 +15,11 @@ public class PointTest {
         double result = a.distance(b);
         assertThat(result, is(2D));
     }
+    @Test
+    public void distance3D(){
+        Point a = new Point(1, 4, 5);
+        Point b = new Point(1, 1, 1);
+        double result=a.distance3d(b);
+        assertThat(result, is(5D));
+    }
 }
