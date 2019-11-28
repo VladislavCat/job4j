@@ -1,12 +1,12 @@
 package ru.job4j.oop;
 
 public class Builder extends Engineer {
-   int numberBilding;
-   String qualityBilding;
-    public int getnumberBilding(){
+   private int numberBilding;
+   private String qualityBilding;
+    private int getnumberBilding(){
        return numberBilding;
    }
-   public String getQualityBilding(){
+    private String getQualityBilding(){
         return qualityBilding;
     }
 }

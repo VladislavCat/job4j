@@ -1,8 +1,8 @@
 package ru.job4j.oop;
 
 public class Doctor extends Profession {
-    String medicalInstitute;
-    public String getMedicalInstitute(){
+    private String medicalInstitute;
+    private String getMedicalInstitute(){
         return medicalInstitute;
     }
 }

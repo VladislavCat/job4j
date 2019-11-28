@@ -1,8 +1,8 @@
 package ru.job4j.oop;
 
 public class Engineer extends Profession {
-    String technicalCollege;
-    public String getTechnicalCollege(){
+    private String technicalCollege;
+    private String getTechnicalCollege(){
         return technicalCollege;
     }
 
