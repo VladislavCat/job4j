@@ -47,9 +47,9 @@ public class Tracker {
     public Item[] findByName(String key){
         Item[] resultName=new Item[100];
         int size = 0;
-        for(int i=0; i<position; i++){
-             if(key.equals(resultName[i].getName())){
-                 resultName[size]=resultName[i];
+        for(int i=0; i< position; i++){
+             if(key.equals(items[i].getName())){
+                 resultName[size]=items[i];
                  size++;
              }
          }
@@ -63,15 +63,13 @@ public class Tracker {
      * @return
      */
     public Item findById(String id) {
-        Item[] resultId = new Item[100];
-        int size = 0;
+        Item rsl = null;
         for (int i = 0; i < position; i++) {
-            if (id.equals(resultId[i].getId())) {
-                resultId[size] = items[i];
-            } else {
-                resultId[size]=null;
+            if (id.equals(items[i].getId())) {
+                rsl = items[i];
+                break;
             }
-        } return resultId[size];
+        } return rsl;
     }
         /**
          * Метод генерирует уникальный ключ для заявки.

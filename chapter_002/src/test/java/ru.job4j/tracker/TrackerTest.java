@@ -38,6 +38,12 @@ public class TrackerTest {
         assertThat(tracker.findByName("Test3"), is(expect));
 
     }
-
-
+    @Test
+    public void whenFindById() {
+        Tracker tracker = new Tracker();
+        Item item = new Item("Test1");
+        tracker.add(item);
+        String id=item.getId();
+        assertThat(tracker.findById(id), is(item));
+    }
     }
