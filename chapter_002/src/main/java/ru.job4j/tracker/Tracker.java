@@ -21,6 +21,42 @@ public class Tracker {
         this.items[this.position++] = item;
         return item;
     }
+    private int indexOf(String id) {
+        int rsl = -1;
+        for (int index = 0; index < position; index++) {
+            if (items[index].getId().equals(id)) {
+                rsl = index;
+                break;
+            }
+        }
+        return rsl;
+    }
+    public boolean replace(String id, Item item){
+        int index= indexOf(id);
+        item.setId(id);
+        items[index]=item;
+        if(items[index]==item){
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    /**
+     * Удаление заявки
+     */
+    public boolean delete(String id){
+        int index=this.indexOf(id);
+        System.arraycopy(items, index + 1, items, index, position - index);
+        items[position - 1] = null;
+        position--;
+        if(items[index]!=items[this.indexOf(id)]){
+            return true;
+        }else {
+            return false;
+        }
+    }
     /**
      * Получение списка всех заявок
      * @return
