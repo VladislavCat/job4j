@@ -31,32 +31,30 @@ public class Tracker {
         }
         return rsl;
     }
+
+        /**
+         * Удаление заявки
+         */
+    public boolean delete(String id) {
+            int index = this.indexOf(id);
+            if (index == -1) {
+                return false;
+            }
+            System.arraycopy(items, index + 1, items, index, position - index);
+            items[position - 1] = null;
+            position--;
+            return true;
+        }
     public boolean replace(String id, Item item){
-        int index= indexOf(id);
+        int index = indexOf(id);
+        if (index == -1) {
+            return false;
+        }
         item.setId(id);
-        items[index]=item;
-        if(items[index]==item){
-            return true;
-        } else {
-            return false;
-        }
-
+        items[index] = item;
+        return true;
     }
 
-    /**
-     * Удаление заявки
-     */
-    public boolean delete(String id){
-        int index=this.indexOf(id);
-        System.arraycopy(items, index + 1, items, index, position - index);
-        items[position - 1] = null;
-        position--;
-        if(items[index]!=items[this.indexOf(id)]){
-            return true;
-        }else {
-            return false;
-        }
-    }
     /**
      * Получение списка всех заявок
      * @return

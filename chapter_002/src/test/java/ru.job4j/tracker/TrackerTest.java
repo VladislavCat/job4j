@@ -65,9 +65,9 @@ public class TrackerTest {
         tracker.add(bug);
         tracker.add(bug2);
         tracker.add(bug3);
-        String id = bug.getId();
+        String id = bug2.getId();
         tracker.delete(id);
-        String rsl=bug2.getId();
+        String rsl=null;
         assertThat(tracker.findById(id), is(rsl));
     }
     }
