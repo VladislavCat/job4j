@@ -31,13 +31,21 @@ public class StartUI {
                 System.out.println("==== Пожалуйста, введите новое имя заявки ====");
                 String name = scanner.nextLine();
                 Item item = new Item(name);
-                tracker.replace(id, item);
+                if (tracker.replace(id, item)==true) {
+                    System.out.println("Заявка изменена");
+                } else {
+                    System.out.println("Заявка не изменена");
+                    this.showMenu();
+                }
             } else if (select == 3) {
                 System.out.println("==== Удаление заявки: ====");
                 System.out.println("==== Пожалуйста, введите ID заявки, которую хотите удалить ====");
                 String id = scanner.nextLine();
-                tracker.delete(id);
-                this.showMenu();
+                if (tracker.delete(id)==true) {
+                    System.out.println("Заявка удалена");
+                } else {
+                    System.out.println("Заявка не удалена");
+                }  this.showMenu();
             } else if (select == 4) {
                 System.out.println("==== Поиск заявки по ID: ====");
                 System.out.println("==== Пожалуйста, введите ID заявки, которую хотите найти ====");
