@@ -17,11 +17,11 @@ public class StartUI {
                 Item item = new Item(name);
                 tracker.add(item);
                 this.showMenu();
-            }else if (select==1) {
+            } else if (select == 1) {
                     System.out.println("==== Все заявки: ====");
-                    Item[] arrayWithoutNull=tracker.findAll();
-                    for(int i=0; i<arrayWithoutNull.length; i++){
-                        Item item=arrayWithoutNull[i];
+                    Item[] arrayWithoutNull = tracker.findAll();
+                    for (int i = 0; i < arrayWithoutNull.length; i++) {
+                        Item item = arrayWithoutNull[i];
                         System.out.println(item);
                     }
             } else if (select == 2) {
@@ -31,21 +31,22 @@ public class StartUI {
                 System.out.println("==== Пожалуйста, введите новое имя заявки ====");
                 String name = scanner.nextLine();
                 Item item = new Item(name);
-                if (tracker.replace(id, item)==true) {
+                if (tracker.replace(id, item)) {
                     System.out.println("Заявка изменена");
                 } else {
                     System.out.println("Заявка не изменена");
-                    this.showMenu();
                 }
+                this.showMenu();
             } else if (select == 3) {
                 System.out.println("==== Удаление заявки: ====");
                 System.out.println("==== Пожалуйста, введите ID заявки, которую хотите удалить ====");
                 String id = scanner.nextLine();
-                if (tracker.delete(id)==true) {
+                if (tracker.delete(id)) {
                     System.out.println("Заявка удалена");
                 } else {
                     System.out.println("Заявка не удалена");
-                }  this.showMenu();
+                }
+                this.showMenu();
             } else if (select == 4) {
                 System.out.println("==== Поиск заявки по ID: ====");
                 System.out.println("==== Пожалуйста, введите ID заявки, которую хотите найти ====");
@@ -57,19 +58,19 @@ public class StartUI {
                     System.out.println("==== Это заявка ====");
                     System.out.println(item.getName());
                 }
-                System.out.println("==== Это заявка ====");
-
-            this.showMenu();
-        } else if(select==5){
+                this.showMenu();
+        } else if (select == 5) {
         System.out.println("==== Поиск заявки по имени: ====");
         System.out.println("==== Пожалуйста, введите имя заявки, которую хотите найти ====");
-        String key=scanner.nextLine();
-        Item[] resultName=tracker.findByName(key);
-        for(int i=0; i<resultName.length; i++){
-            Item item=resultName[i];
+        String key = scanner.nextLine();
+        Item[] resultName = tracker.findByName(key);
+        for (int i = 0; i < resultName.length; i++) {
+            Item item = resultName[i];
             System.out.println(item);
         }
-    }}}
+            }
+        }
+    }
 
 
     private void showMenu() {

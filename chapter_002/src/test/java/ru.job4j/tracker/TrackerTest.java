@@ -14,7 +14,7 @@ public class TrackerTest {
         assertThat(result.getName(), is(item.getName()));
     }
     @Test
-    public void whenFindAllTracker(){
+    public void whenFindAllTracker() {
         Tracker tracker = new Tracker();
         Item item = new Item("Test1");
         Item item2 = new Item("Test2");
@@ -26,7 +26,7 @@ public class TrackerTest {
         assertThat(tracker.findAll(), is(expect));
     }
     @Test
-    public void whenFindByName(){
+    public void whenFindByName() {
         Tracker tracker = new Tracker();
         Item item = new Item("Test3");
         Item item2 = new Item("Test2");
@@ -34,7 +34,7 @@ public class TrackerTest {
         tracker.add(item);
         tracker.add(item2);
         tracker.add(item3);
-        Item[] expect ={item, item3};
+        Item[] expect = {item, item3};
         assertThat(tracker.findByName("Test3"), is(expect));
 
     }
@@ -43,7 +43,7 @@ public class TrackerTest {
         Tracker tracker = new Tracker();
         Item item = new Item("Test1");
         tracker.add(item);
-        String id=item.getId();
+        String id = item.getId();
         assertThat(tracker.findById(id), is(item));
     }
     @Test
@@ -67,7 +67,7 @@ public class TrackerTest {
         tracker.add(bug3);
         String id = bug2.getId();
         tracker.delete(id);
-        String rsl=null;
+        String rsl = null;
         assertThat(tracker.findById(id), is(rsl));
     }
     }

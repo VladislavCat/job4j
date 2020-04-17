@@ -45,7 +45,7 @@ public class Tracker {
             position--;
             return true;
         }
-    public boolean replace(String id, Item item){
+    public boolean replace(String id, Item item) {
         int index = indexOf(id);
         if (index == -1) {
             return false;
@@ -78,16 +78,16 @@ public class Tracker {
      * @param key
      * @return
      */
-    public Item[] findByName(String key){
-        Item[] resultName=new Item[100];
+    public Item[] findByName(String key) {
+        Item[] resultName = new Item[100];
         int size = 0;
-        for(int i=0; i< position; i++){
-             if(key.equals(items[i].getName())){
-                 resultName[size]=items[i];
+        for (int i = 0; i < position; i++) {
+             if (key.equals(items[i].getName())) {
+                 resultName[size] = items[i];
                  size++;
              }
          }
-        resultName =  Arrays.copyOf(resultName, size);
+        resultName = Arrays.copyOf(resultName, size);
         return resultName;
     }
 
