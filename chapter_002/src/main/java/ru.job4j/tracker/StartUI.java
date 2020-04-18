@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class StartUI {
 
     public void init(Scanner scanner, Tracker tracker) {
-        boolean run = false;
+        boolean run = true;
         while (run) {
             this.showMenu();
             System.out.print("Select: ");
@@ -18,12 +18,12 @@ public class StartUI {
                 tracker.add(item);
                 this.showMenu();
             } else if (select == 1) {
-                    System.out.println("==== Все заявки: ====");
-                    Item[] arrayWithoutNull = tracker.findAll();
-                    for (int i = 0; i < arrayWithoutNull.length; i++) {
-                        Item item = arrayWithoutNull[i];
-                        System.out.println(item);
-                    }
+                System.out.println("==== Все заявки: ====");
+                Item[] arrayWithoutNull = tracker.findAll();
+                for (int i = 0; i < arrayWithoutNull.length; i++) {
+                    Item item = arrayWithoutNull[i];
+                    System.out.println(item);
+                }
             } else if (select == 2) {
                 System.out.println("==== Изменение заявки: ====");
                 System.out.println("==== Пожалуйста, введите ID заявки, которую хотите изменить ====");
@@ -68,7 +68,11 @@ public class StartUI {
             Item item = resultName[i];
             System.out.println(item);
         }
-            }
+            } else if (select == 6) {
+
+            run = false;
+
+        }
         }
     }
 
