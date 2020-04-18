@@ -12,9 +12,9 @@ public class Jukebox {
         }
         System.out.println(song);
     }
-    public static void main(String[] args){
-        Jukebox jukebox= new Jukebox();
-        int position=2;
+    public static void main(String[] args) {
+        Jukebox jukebox = new Jukebox();
+        int position = 2;
         jukebox.music(position);
     }
 
