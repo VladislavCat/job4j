@@ -18,7 +18,7 @@ public class StartUI {
             System.out.println(item);
         }
     }
-    public static void replaceBic(Tracker tracker, Input input) {
+    public static void replaceBid(Input input, Tracker tracker) {
         System.out.println("=== Изменение заявки ====");
         String id = input.askStr("==== Пожалуйста, введите ID заявки, которую хотите изменить ====");
         String name = input.askStr("==== Пожалуйста, введите новое имя заявки ====");
@@ -41,11 +41,12 @@ public class StartUI {
     public static void findBidId(Tracker tracker, Input input) {
         System.out.println("==== Поиск заявки по ID: ====");
         String id = input.askStr("==== Пожалуйста, введите ID заявки, которую хотите найти ====");
-        if (tracker.findById(id).equals(null)) {
+        Item item = tracker.findById(id);
+        if (item.equals(null)) {
             System.out.println("==== Такая заявка отсуствует ====");
         } else {
             System.out.println("==== Это заявка ====");
-            System.out.println(tracker.findById(id));
+            System.out.println(item);
         }
     }
         public static void findBidName(Tracker tracker, Input input) {
@@ -54,6 +55,7 @@ public class StartUI {
             Item[] resultName = tracker.findByName(key);
             for (int i = 0; i < resultName.length; i++) {
                 Item item = resultName[i];
+                item.toString();
                 System.out.println(item);
             }
         }
@@ -69,7 +71,7 @@ public class StartUI {
             } else if (select == 1) {
                 StartUI.allBid(tracker);
                 } else if (select == 2) {
-                StartUI.replaceBic(tracker, input);
+                StartUI.replaceBid(input, tracker);
             } else if (select == 3) {
                 StartUI.deleteBid(tracker, input);
             } else if (select == 4) {
