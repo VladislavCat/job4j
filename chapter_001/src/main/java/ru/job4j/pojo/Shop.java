@@ -38,14 +38,14 @@ public class Shop {
         System.out.println();
         for (int i = 0; i < books.length; i++) {
             Book book = books[i];
-            if(book == null && i< books.length-1){
+            if (book == null && i < books.length - 1) {
                 books[i] = books[i + 1];
                 books[i + 1] = null;
         }
             book = books[i];
             if (book != null) {
                 System.out.println(book.getName() + " количество страниц в книге " + book.getNumberOfPages());
-            } else if(book == null) {
+            } else if (book == null) {
                 System.out.println("null");
             }
         }

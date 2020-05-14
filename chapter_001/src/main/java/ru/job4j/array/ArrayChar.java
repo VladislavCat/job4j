@@ -9,11 +9,7 @@ public class ArrayChar {
         boolean result = true;
         char[] value = prefix.toCharArray();
         for (int index = 0; index < data.length; index++) {
-        if (data[index] == value[index]) {
-            result = true;
-        } else {
-            result = false;
-        }
+            result = data[index] == value[index];
         }
         return result;
     }
