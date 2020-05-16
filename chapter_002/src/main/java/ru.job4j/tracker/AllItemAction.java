@@ -8,9 +8,8 @@ public class AllItemAction implements UserAction {
 
     @Override
     public boolean execute(Input input, Tracker tracker) {
-        Item[] arrayWithoutNull = tracker.findAll();
-        for (int i = 0; i < arrayWithoutNull.length; i++) {
-            Item item = arrayWithoutNull[i];
+        for (Item item : tracker.findAll()) {
+            System.out.println(item.getId() + " " + item.getName());
             System.out.println(item);
         }
         return true;
